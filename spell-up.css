@@ -18,10 +18,9 @@ body {
 }
 
 #guess {
-    position: fixed;
+    position: absolute;
     bottom: 0px;
-    max-width: calc(500px - 10px);
-    width: 100%;
+    width: calc(100% - 10px);
     margin: 10px 5px;
     font-size: 25px;
     background-color: #333;
@@ -31,8 +30,7 @@ body {
 #guesses-container {
     border: 1px dashed white;
     margin: 10px;
-    max-width: calc(500px - 20px);
-    width: 100%;
+    width: calc(100% - 20px);
     font-size: large;
 
     display: flex;
@@ -50,11 +48,10 @@ body {
 
 #view-rules {
     display: block;
-    position: fixed;
-    top: 0px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
     text-align: right;
-    max-width: calc(500px - 10px);
     width: 100%;
     font-size: large;
-    padding-top: 7px;
 }
