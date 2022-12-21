@@ -74,14 +74,14 @@ function areCharsAlpabetical(word) {
 }
 function addStrike() {
     strikes += 1;
-    if (strikes > 200) {
+    if (strikes > 2) {
         GuessField.removeEventListener('keyup', handleSubmit);
         displayFinalScore();
     }
 }
 function displayFinalScore() {
     const firstWord = validGuesses[validGuesses.length - 1];
-    ModalPopup.appendChild(FinalScore(firstWord, validGuesses.length));
+    ModalPopup.appendChild(FinalScore(firstWord, validGuesses.length - 1));
     ModalPopup.style.visibility = 'visible';
 }
 function FinalScore(firstWord, score) {

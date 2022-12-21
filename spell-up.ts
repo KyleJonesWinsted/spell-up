@@ -79,7 +79,7 @@ function areCharsAlpabetical(word: string): boolean {
 
 function addStrike(): void {
     strikes += 1;
-    if (strikes > 200) {
+    if (strikes > 2) {
         GuessField.removeEventListener('keyup', handleSubmit)
         displayFinalScore();
     }
@@ -87,7 +87,7 @@ function addStrike(): void {
 
 function displayFinalScore(): void {
     const firstWord = validGuesses[validGuesses.length - 1];
-    ModalPopup.appendChild(FinalScore(firstWord, validGuesses.length));
+    ModalPopup.appendChild(FinalScore(firstWord, validGuesses.length - 1));
     ModalPopup.style.visibility = 'visible';
 }
 
