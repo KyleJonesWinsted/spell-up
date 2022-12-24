@@ -31,7 +31,7 @@ function RulesView() {
                 The goal of the game is to spell as many words as possible. But there's a catch. Each word you spell must meet the following requirements:
             </p>
             <ol>
-                <li>All of the letters in the word must be in alpabetical order. (Ex: boot, copy, ghost) </li>
+                <li>All of the letters in the word must be in alphabetical order. (Ex: boot, copy, ghost) </li>
                 <li>Each word guessed must be alphabetically after the most recent valid guess.</li>
             </ol>
             <p>After 3 wrong guesses, the game is over.</p>
