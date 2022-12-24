@@ -7,6 +7,7 @@ const ModalPopup = document.getElementById('modal-popup') as HTMLDivElement;
 
 window.addEventListener('DOMContentLoaded', () => {
     setStartingWord();
+    displayRules();
 });
 
 GuessField.addEventListener('keyup', handleSubmit);
@@ -41,7 +42,7 @@ function RulesView(): HTMLElement {
             </ol>
             <p>After 3 wrong guesses, the game is over.</p>
             <p>
-                This game is inspired by <a href="https://roosterteeth.com/watch/f-kface-2022-12-14">episode 132 of the F**kFace podcast.</a>
+                This game is inspired by <a href="https://roosterteeth.com/watch/f-kface-2022-12-14" target="_blank">episode 132 of the F**kFace podcast.</a>
             </p>
         </div>
     `) as HTMLDivElement;
@@ -94,6 +95,7 @@ function displayFinalScore(): void {
 function FinalScore(firstWord: string, score: number): HTMLElement {
     return htmlToElement(/*html*/`
         <div>
+            <button onclick="closePopup()">×</button>
             <h1>Game Over!</h1>
             <h2>First Word: ${firstWord}</h2>
             <h2>Score: ${score}</h2>

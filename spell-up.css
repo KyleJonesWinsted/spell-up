@@ -8,20 +8,28 @@ body {
 }
 
 .good {
-    color: green;
+    background-color: #73956f;
+    padding: 5px;
+    border-radius: 3px;
+    text-align: center;
 }
 
 .bad {
-    color: red;
+    padding: 5px;
+    background-color: #F24236;
+    border-radius: 3px;
+    text-align: center;
     text-decoration: line-through;
 }
 
 #guess {
+    text-align: center;
     position: absolute;
     bottom: 0px;
-    width: calc(100% - 10px);
-    margin: 10px 5px;
-    font-size: 25px;
+    padding: 5px;
+    width: calc(100% - 30px);
+    margin: 15px;
+    font-size: 35px;
     background-color: #333;
     color: white;
 }
@@ -29,27 +37,58 @@ body {
 #guesses-container {
     margin: 10px;
     width: calc(100% - 20px);
-    font-size: large;
 
     display: flex;
     flex-direction: column-reverse;
     position: absolute;
-    bottom: 40px;
-    top: 20px;
+    bottom: 60px;
+    top: 40px;
     overflow-y: scroll;
 }
 
 #guesses p {
-    margin: 15px 5px;
-    font-size: 25px;
+    margin: 25px 5px;
+    font-size: 35px;
 }
 
 #view-rules {
     display: block;
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 10px;
+    right: 10px;
     text-align: right;
     width: 100%;
-    font-size: large;
+    font-size: 25px;
+}
+
+#modal-popup {
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    border: 25px solid rgba(12, 12, 12, 0.5);
+    background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    max-width: 500px;
+    background-color: #333;
+    z-index: 999;
+    padding: 15px;
+}
+
+#modal-popup button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: x-large;
+    align-self: left;
+}
+
+#modal-popup a {
+    color: white;
+}
+
+#modal-popup a:visited {
+    color: white;
 }

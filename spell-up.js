@@ -6,6 +6,7 @@ const GuessListView = document.getElementById('guesses');
 const ModalPopup = document.getElementById('modal-popup');
 window.addEventListener('DOMContentLoaded', () => {
     setStartingWord();
+    displayRules();
 });
 GuessField.addEventListener('keyup', handleSubmit);
 document.getElementById('view-rules')?.addEventListener('click', () => {
@@ -35,7 +36,7 @@ function RulesView() {
             </ol>
             <p>After 3 wrong guesses, the game is over.</p>
             <p>
-                This game is inspired by <a href="https://roosterteeth.com/watch/f-kface-2022-12-14">episode 132 of the F**kFace podcast.</a>
+                This game is inspired by <a href="https://roosterteeth.com/watch/f-kface-2022-12-14" target="_blank">episode 132 of the F**kFace podcast.</a>
             </p>
         </div>
     `);
@@ -87,6 +88,7 @@ function displayFinalScore() {
 function FinalScore(firstWord, score) {
     return htmlToElement(/*html*/ `
         <div>
+            <button onclick="closePopup()">×</button>
             <h1>Game Over!</h1>
             <h2>First Word: ${firstWord}</h2>
             <h2>Score: ${score}</h2>
