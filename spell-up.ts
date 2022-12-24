@@ -81,7 +81,8 @@ function areCharsAlpabetical(word: string): boolean {
 function addStrike(): void {
     strikes += 1;
     if (strikes > 2) {
-        GuessField.removeEventListener('keyup', handleSubmit)
+        GuessField.removeEventListener('keyup', handleSubmit);
+        GuessField.blur();
         displayFinalScore();
     }
 }
