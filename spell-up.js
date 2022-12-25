@@ -24,8 +24,7 @@ function closePopup() {
 }
 function RulesView() {
     return htmlToElement(/*html*/ `
-        <div>
-            <button onclick="closePopup()">×</button>
+        <div id="rules-view">
             <h1>Spell Up!</h1>
             <p>
                 The goal of the game is to spell as many words as possible. But there's a catch. Each word you spell must meet the following requirements:
@@ -38,6 +37,7 @@ function RulesView() {
             <p>
                 This game is inspired by <a href="https://roosterteeth.com/watch/f-kface-2022-12-14" target="_blank">episode 132 of the F**kFace podcast.</a>
             </p>
+            <button onclick="closePopup()">Let's Play!</button>
         </div>
     `);
 }
@@ -88,11 +88,13 @@ function displayFinalScore() {
 }
 function FinalScore(firstWord, score) {
     return htmlToElement(/*html*/ `
-        <div>
+        <div id="final-score">
             <button onclick="closePopup()">×</button>
-            <h1>Game Over!</h1>
-            <h2>First Word: ${firstWord}</h2>
-            <h2>Score: ${score}</h2>
+            <div>
+                <h1>Game Over!</h1>
+                <h2>First Word: ${firstWord}</h2>
+                <h2>Score: ${score}</h2>
+            </div>
         </div>
     `);
 }

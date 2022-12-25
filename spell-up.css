@@ -82,7 +82,7 @@ body {
     border: none;
     color: white;
     font-size: x-large;
-    align-self: left;
+    align-self: center;
 }
 
 #modal-popup a {
@@ -91,4 +91,46 @@ body {
 
 #modal-popup a:visited {
     color: white;
+}
+
+#rules-view {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    margin: 0;
+    padding-right: 15px;
+}
+
+#rules-view h1 {
+    font-size: 45px;
+    text-align: center;
+    margin-top: 0;
+}
+
+#rules-view button {
+    width: calc(100% - 30px);
+    margin: 5px 15px;
+    background-color: #3F84E5;
+    border-radius: 5px;
+}
+
+#rules-view button:hover {
+    background-color: 909CC2;
+}
+
+#rules-view button:active {
+    background-color: 84CAE7;
+}
+
+#final-score div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 45px);
+}
+
+#final-score h1 {
+    font-size: 35px;
 }
