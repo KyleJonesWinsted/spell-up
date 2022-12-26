@@ -7,7 +7,6 @@ const ModalPopup = document.getElementById('modal-popup') as HTMLDivElement;
 
 window.addEventListener('DOMContentLoaded', () => {
     setStartingWord();
-    displayRules();
 });
 
 GuessField.addEventListener('keyup', handleSubmit);
@@ -31,6 +30,7 @@ function closePopup(): void {
 function RulesView(): HTMLElement {
     return htmlToElement(/*html*/`
         <div id="rules-view">
+            <button onclick="closePopup()">×</button>
             <h1>Spell Up!</h1>
             <p>
                 The goal of the game is to spell as many words as possible. But there's a catch. Each word you spell must meet the following requirements:
@@ -43,7 +43,6 @@ function RulesView(): HTMLElement {
             <p>
                 This game is inspired by <a href="https://roosterteeth.com/watch/f-kface-2022-12-14" target="_blank">episode 132 of the F**kFace podcast.</a>
             </p>
-            <button onclick="closePopup()">Let's Play!</button>
         </div>
     `) as HTMLDivElement;
 }

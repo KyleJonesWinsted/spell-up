@@ -29,7 +29,7 @@ body {
     padding: 5px;
     width: calc(100% - 30px);
     margin: 15px;
-    font-size: 35px;
+    font-size: 30px;
     background-color: #333;
     color: white;
 }
@@ -48,7 +48,7 @@ body {
 
 #guesses p {
     margin: 25px 5px;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 #view-rules {
@@ -75,14 +75,15 @@ body {
     background-color: #333;
     z-index: 999;
     padding: 15px;
+    overflow: scroll;
 }
 
 #modal-popup button {
     background: none;
     border: none;
     color: white;
-    font-size: x-large;
-    align-self: center;
+    font-size: 35px;
+    padding: 0px 15px;
 }
 
 #modal-popup a {
@@ -93,34 +94,19 @@ body {
     color: white;
 }
 
-#rules-view {
+/* #rules-view {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     margin: 0;
     padding-right: 15px;
-}
+} */
 
 #rules-view h1 {
     font-size: 45px;
     text-align: center;
     margin-top: 0;
-}
-
-#rules-view button {
-    width: calc(100% - 30px);
-    margin: 5px 15px;
-    background-color: #3F84E5;
-    border-radius: 5px;
-}
-
-#rules-view button:hover {
-    background-color: 909CC2;
-}
-
-#rules-view button:active {
-    background-color: 84CAE7;
 }
 
 #final-score div {
