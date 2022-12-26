@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, height=device-height" />
     <link rel="stylesheet" href="spell-up.css">
     <title>Spell Up</title>
 </head>
@@ -11,11 +11,9 @@
 <body>
     <div id="modal-popup"></div>
     <a id="view-rules">How To Play</a>
-    <div id="guesses-container">
-        <div id="guesses"></div>
-    </div>
-    <input type="text" name="guess" id="guess" autocomplete="off" autocorrect="off" spellcheck="false"
-        placeholder="Spell up...">
+    <input type="text" name="guess" id="guess" autocapitalize="off" autocomplete="off" autocorrect="off"
+        spellcheck="false" placeholder="Spell up...">
+    <div id="guesses"></div>
     <script src="spell-up.js"></script>
 </body>
 

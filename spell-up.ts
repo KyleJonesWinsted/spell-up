@@ -22,6 +22,7 @@ function displayRules(): void {
 
 function closePopup(): void {
     ModalPopup.style.visibility = 'hidden';
+    GuessField.focus();
     for (const child of ModalPopup.children) {
         ModalPopup.removeChild(child);
     }
@@ -36,6 +37,7 @@ function RulesView(): HTMLElement {
                 The goal of the game is to spell as many words as possible. But there's a catch. Each word you spell must meet the following requirements:
             </p>
             <ol>
+                <li>Words must be longer than 2 letters.</li>
                 <li>All of the letters in the word must be in alphabetical order. (Ex: boot, copy, ghost) </li>
                 <li>Each word guessed must be alphabetically after the most recent valid guess.</li>
             </ol>
@@ -79,7 +81,7 @@ function areCharsAlpabetical(word: string): boolean {
 
 function addStrike(): void {
     strikes += 1;
-    if (strikes > 2) {
+    if (strikes > 200) { // FIXME:
         GuessField.removeEventListener('keyup', handleSubmit);
         GuessField.blur();
         displayFinalScore();
