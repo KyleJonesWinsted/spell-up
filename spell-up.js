@@ -76,7 +76,7 @@ function areCharsAlpabetical(word) {
 }
 function addStrike() {
     strikes += 1;
-    if (strikes > 200) { // FIXME:
+    if (strikes > 2) {
         GuessField.removeEventListener('keyup', handleSubmit);
         GuessField.blur();
         displayFinalScore();
