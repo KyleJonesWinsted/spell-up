@@ -37,7 +37,7 @@ function RulesView() {
             </ol>
             <p>After 3 wrong guesses, the game is over.</p>
             <p>
-                This game is inspired by <a href="https://roosterteeth.com/watch/f-kface-2022-12-14" target="_blank">episode 132 of the F**kFace podcast.</a>
+                This game is inspired by <a href="https://www.youtube.com/watch?v=4M6krm-C0EE&t=3243s" target="_blank">episode 132 of the F**kFace podcast.</a>
             </p>
         </div>
     `);
